@@ -6,8 +6,8 @@ var router = express.Router();
 var mongoose = require('mongoose'),
   Request = mongoose.model('Requests');
 
-request = request.defaults({ proxy : 'http://10.31.0.1:8080',jar: true});
-//request = request.defaults({ jar: true});
+//request = request.defaults({ proxy : 'http://10.31.0.1:8080',jar: true});
+request = request.defaults({ jar: true});
 
 
 var options = {

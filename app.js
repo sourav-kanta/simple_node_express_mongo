@@ -26,6 +26,8 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
   process.env.OPENSHIFT_APP_NAME;
 }
+
+console.log(connection_string);
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://'+connection_string)
   .then(() =>  console.log('connection succesful'))
